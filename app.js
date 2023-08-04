@@ -1,9 +1,12 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 
 const authRoutes = require("./routes/authRoutes"); // Importing authRoutes
 const cookieParser = require("cookie-parser"); // Importing cookie parser
 const { requireAuth, checkUser } = require("./middleware/authMiddleware"); // Importing our custom mw function to protect a route & check a user
+
+const port = process.env.PORT || 3001;
 
 const app = express();
 
@@ -16,15 +19,14 @@ app.use(cookieParser()); // use cookie parser as middleware
 app.set("view engine", "ejs");
 
 // database connection
-const dbURI =
-  "mongodb+srv://raghavkashyap0311:Test1234@cluster0.hjcmkw5.mongodb.net/node-auth";
+const dbURI = process.env.DB_URI;
 mongoose
   .connect(dbURI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
   })
-  .then((result) => app.listen(3000))
+  .then((result) => app.listen(port))
   .catch((err) => console.log(err));
 // mongoose.set("strictQuery", false);
 
