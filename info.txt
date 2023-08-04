@@ -1,0 +1,33 @@
+******* PROJECT INFO *******
+
+Project Name - Auth Tester
+Code Editor - VS Code
+Tech stack - Node, Express, MongoDB.
+ODM (Object Data Modeling) Liberary - Mongoose.
+Templating Engine - ejs.
+HTTP Req Tester - PostMan.
+Package Manager - NPM.
+Data Leakage Protection - JWT (JSON Web Tokens).
+Asset Designing Tool - Canva.
+Fonts API - Google Fonts.
+starting point of Project - app.js.
+Static / Public dir - Public.
+Rendering Views / ejs template files dir - Views.
+Non-changing views (header & footer) - views/partials.
+
+
+******* AUTH ROUTES *******
+
+/signup ---> GET =====> sign up Page
+/signup ---> POST ====> create a new user in db
+/login ----> GET =====> log in page
+/login ----> POST ====> authenticate a current user
+/logout ---> GET =====> log a user out
+
+******* THIRD PARTY MODULES/PACKAGES *******
+express - to use express in our project
+ejs - to use ejs template engine in our project
+mongoose - to use mongoose and mongoose hooks in our project
+validator - to validate user info (email & password)
+bcrypt - to encrypt or hash user password before it saved to db 
+cookie-parser - to manage cookies in our project
