@@ -26,6 +26,7 @@ mongoose
   })
   .then((result) => app.listen(3000))
   .catch((err) => console.log(err));
+// mongoose.set("strictQuery", false);
 
 // routes
 app.get("*", checkUser); // check user for every get request / route

@@ -7,6 +7,8 @@ const { isEmail } = require("validator");
 //importing bcrypt package
 const bcrypt = require("bcrypt");
 
+// mongoose.set("strictQuery", false);
+
 // creating a schema (defines the structure of our user document)
 const userSchema = new mongoose.Schema({
   email: {
